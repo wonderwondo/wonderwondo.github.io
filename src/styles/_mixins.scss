@@ -1,0 +1,13 @@
+@import './fonts';
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+}
+
+@mixin font-button {
+    font-family: $sans-serif;
+    font-size: 16px;
+    font-weight: $semi-bold;
+    letter-spacing: 1.28px;
+}

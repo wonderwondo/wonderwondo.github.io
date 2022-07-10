@@ -1,0 +1,39 @@
+@import './colors';
+@import './fonts';
+@import './mixins';
+
+.header {
+    position: sticky;
+    top: 0;
+
+    a {
+        text-decoration: none;
+        color: $n900;
+    }
+
+    nav {
+        @include flex-center;
+        justify-content: space-between;
+        height: 4rem;
+        background-color: $b50;
+
+        .logo {
+            font-family: $serif;
+            font-size: 24px;
+            font-weight: $bold;
+        }
+
+        .ul-items {
+            list-style: none;
+            padding: 0;
+
+            .li-items {
+                a {
+                    margin: 0 1rem;
+                    @include font-button;
+                }
+            }
+        }
+    }
+}
+
