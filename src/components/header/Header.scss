@@ -1,26 +1,23 @@
-@import './colors';
-@import './fonts';
-@import './mixins';
-
 .header {
     position: sticky;
     top: 0;
 
     a {
         text-decoration: none;
-        color: $n900;
+        color: #262626;
     }
 
     nav {
-        @include flex-center;
+        display: flex;
+        align-items: center;
         justify-content: space-between;
-        height: 4rem;
-        background-color: $b50;
+        height: 6rem;
+        background-color: #FAF7F2;
 
         .logo {
-            font-family: $serif;
+            font-family: new-spirit;
             font-size: 24px;
-            font-weight: $bold;
+            font-weight: 700;
         }
 
         .ul-items {
@@ -30,7 +27,6 @@
             .li-items {
                 a {
                     margin: 0 1rem;
-                    @include font-button;
                 }
             }
         }

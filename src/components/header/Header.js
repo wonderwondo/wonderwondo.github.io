@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../styles/Header.scss';
+import './Header.scss';
+import Button from '../ui/button/Button';
 
 const Header = () => {
     return(
@@ -11,9 +12,9 @@ const Header = () => {
                 </div>
                 <ul className='ul-items'>
                     <li className='li-items'>
-                        <Link to='/work'>WORK</Link>
-                        <Link to='/blog'>BLOG</Link>
-                        <Link to='/about'>ABOUT</Link>
+                        <Link to='/work'><Button variant='default' size='lg'>WORK</Button></Link>
+                        <Link to='/blog'><Button variant='default' size='lg'>BLOG</Button></Link>
+                        <Link to='/about'><Button variant='default' size='lg'>ABOUT</Button></Link>
                     </li>     
                 </ul>
             </nav>

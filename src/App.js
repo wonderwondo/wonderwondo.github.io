@@ -1,10 +1,16 @@
 import './App.scss';
-import Header from './components/Header';
+import { ThemeProvider } from 'styled-components';
+import theme from './styles/theme';
+import GlobalStyle from './styles/GlobalStyle';
+import Header from './components/header/Header';
 
 function App() {
   return (
     <div className="App">
-      <Header />
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
+        <Header />
+      </ThemeProvider>
     </div>
   );
 }
