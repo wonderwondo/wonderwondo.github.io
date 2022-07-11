@@ -22,6 +22,10 @@ const font = {
     family: {
         title: `'new-spirit', serif`,
         body:  `'proxima-nova', sans-serif`,
+    },
+    weight: {
+        semibold: 600,
+        bold: 700
     }
 }
 

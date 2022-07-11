@@ -1,24 +1,45 @@
-import React from 'react';
+import styled from "styled-components";
 import { Link } from 'react-router-dom';
-import './Header.scss';
 import Button from './Button';
 
-const Header = () => {
-    return(
-        <div className='header'>
+const Logo = styled.div`
+    font-family: ${(p) => p.theme.font.family.title};
+    font-size: 24px;
+    font-weight: ${(p) => p.theme.font.weight.bold};
+`;
+
+const StyledHeader = styled.div`
+    position: sticky;
+    top: 0;
+
+    a {
+        text-decoration: none;
+        color: ${(p) => p.theme.color.n900};
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 6rem;
+        background-color: ${(p) => p.theme.color.b50};
+    }
+`;
+
+function Header() {
+    return (
+        <StyledHeader>
             <nav>
-                <div className='logo'>
-                    <Link to='/'>wonder·wondo</Link>
-                </div>
-                <ul className='ul-items'>
-                    <li className='li-items'>
+                <Link to='/'><Logo>wonder·wondo</Logo></Link>
+                <ul>
+                    <li>
                         <Link to='/work'><Button variant='default' size='lg'>WORK</Button></Link>
                         <Link to='/blog'><Button variant='default' size='lg'>BLOG</Button></Link>
                         <Link to='/about'><Button variant='default' size='lg'>ABOUT</Button></Link>
-                    </li>     
+                    </li>
                 </ul>
             </nav>
-        </div>
+        </StyledHeader>
     );
 }
 
