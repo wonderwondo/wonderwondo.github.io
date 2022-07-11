@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Header.scss';
-import Button from '../ui/button/Button';
+import Button from './Button';
 
 const Header = () => {
     return(

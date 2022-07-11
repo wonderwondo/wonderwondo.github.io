@@ -22,14 +22,20 @@ const font = {
     family: {
         title: `'new-spirit', serif`,
         body:  `'proxima-nova', sans-serif`,
-    },
+    }
+}
+
+const breakpoint = {
+    xs: '599px',
+    sm: '904px',
+    md: '1440px'
 }
 
 const device = {
-    xs: `@media only screen and (max-width: 599px)`,
-    sm: `@media only screen and (max-width: 904px)`,
-    md: `@media only screen and (max-width: 1440px)`,
-    lg: `@media only screen and (min-width: 1440px)`
+    xs: `@media only screen and (max-width: ${breakpoint.xs})`,
+    sm: `@media only screen and (min-width: ${breakpoint.xs})`,
+    md: `@media only screen and (min-width: ${breakpoint.sm})`,
+    lg: `@media only screen and (min-width: ${breakpoint.md})`
 }
 
 const theme = {
