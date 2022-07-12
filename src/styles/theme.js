@@ -30,17 +30,19 @@ const font = {
 }
 
 const breakpoint = {
-    xs: '599px',
-    sm: '904px',
-    md: '1440px'
+    sm: '599px',
+    md: '904px',
+    lg: '1440px'
 }
 
 const device = {
-    xs: `@media only screen and (max-width: ${breakpoint.xs})`,
-    sm: `@media only screen and (min-width: ${breakpoint.xs})`,
-    md: `@media only screen and (min-width: ${breakpoint.sm})`,
-    lg: `@media only screen and (min-width: ${breakpoint.md})`
+    xs: `only screen and (max-width: ${breakpoint.sm})`,
+    sm: `only screen and (min-width: ${breakpoint.sm})`,
+    md: `only screen and (min-width: ${breakpoint.md})`,
+    lg: `only screen and (min-width: ${breakpoint.lg})`
 }
+
+// console.log(`${breakpoint.sm}`);
 
 const theme = {
     color, font, device

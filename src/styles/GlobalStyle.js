@@ -4,8 +4,13 @@ import '../styles/font.css';
 
 const GlobalStyle = createGlobalStyle`
     ${reset}
+    
     *, *::before, *::after {
         box-sizing: border-box;
+    }
+
+    :root {
+        font-size: 10px;
     }
 
     body {
