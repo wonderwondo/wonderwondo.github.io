@@ -37,6 +37,7 @@ const StyledHeader = styled.div`
             flex-direction: column;
             height: auto;
             overflow: hidden;
+            justify-content: center;
         }
 
         div {
@@ -48,6 +49,7 @@ const StyledHeader = styled.div`
                 position: absolute;
                 right: 3rem;
                 font-size: 3rem;
+                cursor: pointer;
     
                 @media ${(p) => p.theme.device.xs} {
                     display: block;
@@ -62,7 +64,7 @@ const StyledHeader = styled.div`
             list-style: none;
 
             @media ${(p) => p.theme.device.xs} {
-                display: ${(p) => p.isToggled ? 'block' : 'none'};
+                display: ${(p) => p.isToggled ? 'grid' : 'none'};
                 grid-template-columns: 1fr;
                 margin-bottom: 2em;
             }

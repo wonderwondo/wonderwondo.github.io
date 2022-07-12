@@ -4,4 +4,4 @@
 - Designer: Wondo Jeong
 - Developer: Hanbyeol Lee
 
-#### `figma` `react.js` `sass` `styled-components`
+#### `figma` `react.js` `sass` `styled-components` `material ui`
