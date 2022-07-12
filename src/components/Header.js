@@ -1,11 +1,17 @@
+import { useState } from "react";
 import styled from "styled-components";
 import { Link } from 'react-router-dom';
 import Button from './Button';
+import { MenuRounded } from "@material-ui/icons";
 
 const Logo = styled.div`
     font-family: ${(p) => p.theme.font.family.title};
     font-weight: ${(p) => p.theme.font.weight.bold};
-    font-size: clamp(1.6rem, 2vw, 2.4rem);
+    font-size: clamp(2rem, 2.2vw, 2.4rem);
+
+    @media ${(p) => p.theme.device.xs} {
+        margin: 4rem 0;
+    }
 `;
 
 const StyledHeader = styled.div`
@@ -27,24 +33,67 @@ const StyledHeader = styled.div`
         margin: 0 auto;
         padding: 0 clamp(4rem, 10.3vw, 14.8rem);
 
+        @media ${(p) => p.theme.device.xs} {
+            flex-direction: column;
+            height: auto;
+            overflow: hidden;
+        }
+
         div {
+            display: flex;
+            align-items: center;
+
+            .menu-icon {
+                display: none;
+                position: absolute;
+                right: 3rem;
+                font-size: 3rem;
+    
+                @media ${(p) => p.theme.device.xs} {
+                    display: block;
+                }
+            }
+        }
+
+        ul {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             column-gap: 3.2rem;
-        }
+            list-style: none;
+
+            @media ${(p) => p.theme.device.xs} {
+                display: ${(p) => p.isToggled ? 'block' : 'none'};
+                grid-template-columns: 1fr;
+                margin-bottom: 2em;
+            }
+
+            li {
+                margin: 0 auto;
+            }
     }
 `;
 
 function Header() {
+    const [isToggled, setIsToggled] = useState(false);
+
     return (
-        <StyledHeader>
+        <StyledHeader isToggled={isToggled}>
             <nav>
-                <Link to='/'><Logo>wonder·wondo</Logo></Link>
-                <div>
-                    <Link to='/work'><Button variant='default' size='lg'>WORK</Button></Link>
-                    <Link to='/blog'><Button variant='default' size='lg'>BLOG</Button></Link>
-                    <Link to='/about'><Button variant='default' size='lg'>ABOUT</Button></Link>
+                <div className='menu-tab'>
+                    <Link to='/'><Logo>wonder·wondo</Logo></Link>
+                    <MenuRounded 
+                        className='menu-icon'
+                        onClick={() => {
+                            setIsToggled(!isToggled);
+                            console.log("haha");
+                        }} 
+                    />
                 </div>
+                <ul>
+                    <li><Link to='/work'><Button variant='default' size='lg'>WORK</Button></Link></li>
+                    <li><Link to='/blog'><Button variant='default' size='lg'>BLOG</Button></Link></li>
+                    <li><Link to='/about'><Button variant='default' size='lg'>ABOUT</Button></Link></li>
+                </ul>
             </nav>
         </StyledHeader>
     );
