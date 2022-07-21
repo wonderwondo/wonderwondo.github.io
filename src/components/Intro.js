@@ -29,17 +29,17 @@ const StyledIntro = styled.main`
             display: flex;
             flex-direction: column;
             padding: 0 clamp(4rem, 10.3vw, 14.8rem);
-            position: relative;
             
-
             img {
                 max-width: 32.5rem;
                 object-fit: cover;
+                position: relative;
                 animation: fadeInUp 2s;
             }
 
             span {
                 color: ${(p) => p.theme.color.n900};
+                position: relative;
                 animation: fadeInUp 1.5s;
             }
         }
