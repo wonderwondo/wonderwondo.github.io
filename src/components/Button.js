@@ -18,21 +18,6 @@ const VARIANTS = {
     `,
 };
 
-function Button({ disabled, size, variant, children }) {
-    const sizeStyle = SIZES[size];
-    const variantStyle = VARIANTS[variant];
-
-    return (
-        <StyledButton
-            disabled={disabled}
-            sizeStyle={sizeStyle}
-            variantStyle={variantStyle}
-        >
-            {children}
-        </StyledButton>
-    );
-}
-
 const StyledButton = styled.button`
     ${(p) => p.sizeStyle}
     ${(p) => p.variantStyle}
@@ -61,5 +46,20 @@ const StyledButton = styled.button`
         backgroun: var(--button-bg-color, #025ce2);
     }
 `;
+
+function Button({ disabled, size, variant, children }) {
+    const sizeStyle = SIZES[size];
+    const variantStyle = VARIANTS[variant];
+
+    return (
+        <StyledButton
+            disabled={disabled}
+            sizeStyle={sizeStyle}
+            variantStyle={variantStyle}
+        >
+            {children}
+        </StyledButton>
+    );
+}
 
 export default Button;

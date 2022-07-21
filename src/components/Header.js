@@ -14,8 +14,9 @@ const Logo = styled.div`
     }
 `;
 
-const StyledHeader = styled.div`
-    position: sticky;
+const StyledHeader = styled.header`
+    position: fixed;
+    width: 100vw;
     top: 0;
     background-color: ${(p) => p.theme.color.b50};
 
