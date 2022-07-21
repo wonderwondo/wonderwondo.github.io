@@ -18,6 +18,7 @@ const StyledHeader = styled.header`
     position: fixed;
     width: 100vw;
     top: 0;
+    z-index: 10;
     background-color: ${(p) => p.theme.color.b50};
 
     a {
@@ -63,7 +64,7 @@ const StyledHeader = styled.header`
             grid-template-columns: repeat(3, 1fr);
             column-gap: 3.2rem;
             list-style: none;
-
+            
             @media ${(p) => p.theme.device.xs} {
                 display: ${(p) => p.isToggled ? 'grid' : 'none'};
                 grid-template-columns: 1fr;
