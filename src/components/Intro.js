@@ -14,17 +14,6 @@ const StyledIntro = styled.main`
         justify-content: center;
         margin: 0 auto;
 
-        @keyframes fadeInUp{
-            0% {
-                opacity: 0;
-                transform: translate3d(0, 100%, 0);
-            }
-            to {
-                opacity: 1;
-                transform: translateZ(0);
-            }
-        }
-
         .intro-container {
             display: flex;
             flex-direction: column;
@@ -34,13 +23,11 @@ const StyledIntro = styled.main`
                 max-width: 32.5rem;
                 object-fit: cover;
                 position: relative;
-                animation: fadeInUp 2s;
             }
 
             span {
                 color: ${(p) => p.theme.color.n900};
                 position: relative;
-                animation: fadeInUp 1.5s;
             }
         }
     }
