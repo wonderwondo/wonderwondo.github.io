@@ -42,7 +42,7 @@ const StyledSplash = styled.section`
 
             @media ${(p) => p.theme.device.xs} {
                 width: 100%;
-                margin-bottom: 5vh;
+                margin-bottom: 4rem;
             }
         }
 

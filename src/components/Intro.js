@@ -38,7 +38,7 @@ const StyledIntro = styled.main`
             }
 
             @media ${(p) => p.theme.device.xs} {
-                justify-content: center;
+                margin-top: 5rem;
             }
         }
     }
