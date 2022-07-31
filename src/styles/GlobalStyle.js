@@ -34,7 +34,7 @@ const GlobalStyle = createGlobalStyle`
     h2 {
         font-family: ${(p) => p.theme.font.family.title};
         font-weight: 700;
-        font-size: 5.6rem;
+        font-size: clamp(3.6rem, 9.6vw, 5.6rem);
         letter-spacing: -0.15rem;;
     }
 
@@ -48,7 +48,7 @@ const GlobalStyle = createGlobalStyle`
     h4 {
         font-family: ${(p) => p.theme.font.family.body};
         font-weight: 500;
-        font-size: 2.4rem;
+        font-size: clamp(1.4rem, 3.7vw, 2.4rem);
     }
 
     h5 {

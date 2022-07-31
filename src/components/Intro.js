@@ -18,16 +18,27 @@ const StyledIntro = styled.main`
             display: flex;
             flex-direction: column;
             padding: 0 clamp(4rem, 10.3vw, 14.8rem);
-            
-            img {
-                max-width: 32.5rem;
-                object-fit: cover;
-                position: relative;
+
+            .intro-h2-light {
+                font-weight: 600;
             }
 
-            span {
-                color: ${(p) => p.theme.color.n900};
-                position: relative;
+            .intro-h2-light:nth-child(1) {
+                margin-bottom: 3.2rem;
+            }
+
+            .intro-h2-light:nth-child(2) {
+                margin-bottom: 1.6rem;
+            }
+
+            .intro-h4-light {
+                max-width: 53rem;
+                margin-top: 10rem;
+                line-height: 2.8rem;
+            }
+
+            @media ${(p) => p.theme.device.xs} {
+                justify-content: center;
             }
         }
     }
@@ -38,8 +49,11 @@ function Intro() {
         <StyledIntro>
             <div>
                 <div className='intro-container'>
-                    <img src="image/intro_circle.png" alt="intro_circle" />
-                    <span className='h0'>Wonder why.</span>
+                    <h2 className='intro-h2-light'>Hello,</h2>
+                    <h2 className='intro-h2-light'>I’m an interaction designer</h2>
+                    <h2>Wondo Jeong</h2>
+                    <h4 className='intro-h4-light'>Here are some projects that I am most proud of 
+                        and give you a hint of my design approach.</h4>
                 </div>
             </div>
         </StyledIntro>

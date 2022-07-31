@@ -5,12 +5,21 @@ import Button from './Button';
 import { MenuRounded } from "@material-ui/icons";
 
 const Logo = styled.div`
+    display: flex;
     font-family: ${(p) => p.theme.font.family.title};
     font-weight: ${(p) => p.theme.font.weight.bold};
     font-size: clamp(2rem, 2.2vw, 2.4rem);
 
+    img {
+        height: clamp(2rem, 2.2vw, 2.4rem);
+        margin-right: 1rem;
+        align-self: flex-start;
+    }
+
     @media ${(p) => p.theme.device.xs} {
         margin: 4rem 0;
+        flex-direction: column;
+        align-self: flex-start;
     }
 `;
 
@@ -37,6 +46,7 @@ const StyledHeader = styled.header`
 
         @media ${(p) => p.theme.device.xs} {
             flex-direction: column;
+            align-items: flex-start;
             height: auto;
             overflow: hidden;
             justify-content: center;
@@ -85,7 +95,12 @@ function Header() {
         <StyledHeader isToggled={isToggled}>
             <nav>
                 <div className='menu-tab'>
-                    <Link to='/'><Logo>wonder·wondo</Logo></Link>
+                    <Link to='/'>
+                        <Logo>
+                            <img src="image/header_icon.png" alt="header_icon" />
+                            wonder·wondo
+                        </Logo>
+                    </Link>
                     <MenuRounded 
                         className='menu-icon'
                         onClick={() => {

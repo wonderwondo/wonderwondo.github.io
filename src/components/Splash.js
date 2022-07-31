@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const StyledSplash = styled.div`
+const StyledSplash = styled.section`
     width: 100%;
     height: 100vh;
     position: fixed;
@@ -36,13 +36,13 @@ const StyledSplash = styled.div`
             height: 5vh;
 
             .i {
-                max-width: 9rem;
+                width: clamp(6rem, 12vw ,9rem);
                 object-fit: cover;
             }
 
             @media ${(p) => p.theme.device.xs} {
                 width: 100%;
-                height: 15vh;
+                margin-bottom: 5vh;
             }
         }
 
@@ -56,7 +56,6 @@ const StyledSplash = styled.div`
 
             @media ${(p) => p.theme.device.xs} {
                 width: 100%;
-                height: 15vh;
             }
         }
 
