@@ -74,6 +74,7 @@ const StyledHeader = styled.header`
             li {
                 margin: 0 auto;
             }
+        }
     }
 `;
 
