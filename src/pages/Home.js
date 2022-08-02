@@ -4,11 +4,11 @@ import Splash from '../components/Splash';
 
 function Home() {
   return (
-    <div>
-      <Header />
+    <>
+      <Header variant='home' />
       <Intro />
       <Splash />
-    </div>
+    </>
   );
 }
 

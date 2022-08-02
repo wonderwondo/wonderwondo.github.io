@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 
 const SIZES = {
     lg: css`
-      --button-font-size: 16px;
+      --button-font-size: 1.6rem;
       --button-font-weight: 600;
       --button-letter-spacing: 1.28px;
       --button-padding: 16px 24px;
@@ -31,29 +31,20 @@ const StyledButton = styled.button`
     letter-spacing: var(--button-letter-spacing, 1px);
     padding: var(--button-padding, 12px 16px);
     border-radius: var(--button-radius, 8px);
-    color: var(--button-color, #ffffff);
-    background: var(--button-bg-color, #0d6efd);
+    color: var(--button-color, #262626);
+    background: var(--button-bg-color, #FAF7F2);
 
-    &:active,
-    &:hover,
-    &:focus {
-        background: var(--button-hover-bg-color, #025ce2);
-    }
-
-    &:disabled {
-        cursor: default;
-        opacity: 0.5;
-        backgroun: var(--button-bg-color, #025ce2);
+    &:hover {
+        background: var(--button-hover-bg-color, #F8F2EE);
     }
 `;
 
-function Button({ disabled, size, variant, children }) {
+function Button({ size, variant, children }) {
     const sizeStyle = SIZES[size];
     const variantStyle = VARIANTS[variant];
 
     return (
         <StyledButton
-            disabled={disabled}
             sizeStyle={sizeStyle}
             variantStyle={variantStyle}
         >

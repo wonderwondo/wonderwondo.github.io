@@ -51,7 +51,7 @@ const StyledSplash = styled.section`
             height: 5vh;
             font-family: ${(p) => p.theme.font.family.title};
             font-weight: ${(p) => p.theme.font.weight.bold};
-            font-size: clamp(4rem, 10vw ,8rem);
+            font-size: clamp(3.6rem, 9vw ,8rem);
             color: ${(p) => p.theme.color.b50};
 
             @media ${(p) => p.theme.device.xs} {
@@ -148,7 +148,7 @@ function Splash() {
             <div className='splash-container'>
                 <div className='images'>
                     <img className='i' src="image/splash_circle.png" alt="splash_circle" />
-                    <img className='i' src="image/splash_square.png" alt="splash_splash_square" />
+                    <img className='i' src="image/splash_square.png" alt="splash_square" />
                     <img className='i' src="image/splash_star.png" alt="splash_star" />
                 </div>
                 <div className='messages'>
@@ -157,7 +157,7 @@ function Splash() {
                     <div className='m'>connect.</div>
                 </div>
             </div>
-            </StyledSplash>
+        </StyledSplash>
     );
 }
 

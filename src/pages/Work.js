@@ -1,9 +1,11 @@
-import React from 'react';
+import Header from '../components/Header';
 
-const Work = () => {
-    return(
-        <div></div>
-    );
+function Work() {
+    return (
+        <>
+          <Header variant='work' />
+        </>
+      );
 }
 
 export default Work;

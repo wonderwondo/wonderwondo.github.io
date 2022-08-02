@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const StyledIntro = styled.main`
+const HomeIntro = styled.main`
     width: 100%;
     height: 100vh;
     position: 0;
@@ -46,7 +46,7 @@ const StyledIntro = styled.main`
 
 function Intro() {
     return(
-        <StyledIntro>
+        <HomeIntro>
             <div>
                 <div className='intro-container'>
                     <h2 className='intro-h2-light'>Hello,</h2>
@@ -56,7 +56,7 @@ function Intro() {
                         and give you a hint of my design approach.</h4>
                 </div>
             </div>
-        </StyledIntro>
+        </HomeIntro>
     );
 }
 export default Intro;

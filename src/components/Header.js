@@ -1,14 +1,41 @@
 import { useState } from "react";
-import styled from "styled-components";
-import { Link } from 'react-router-dom';
-import Button from './Button';
+import styled, { css } from "styled-components";
+import { NavLink as Link } from 'react-router-dom';
 import { MenuRounded } from "@material-ui/icons";
+
+const VARIANTS = {
+    home: css`
+        --header-bg-color: ${(p) => p.theme.color.b50};
+        --header-color: ${(p) => p.theme.color.n900};
+        --button-hover-color: ${(p) => p.theme.color.b100};
+        --button-active-color: ${(p) => p.theme.color.b150};
+    `,
+    work: css`
+        --header-bg-color: black;
+        --header-color: white;
+        --button-hover-color: ${(p) => p.theme.color.n900};
+        --button-active-color: ${(p) => p.theme.color.n700};
+    `,
+    blog: css`
+        --header-bg-color: white;
+        --header-color: ${(p) => p.theme.color.n900};
+        --button-hover-color: ${(p) => p.theme.color.b100};
+        --button-active-color: ${(p) => p.theme.color.b150};
+    `,
+    about: css`
+        --header-bg-color: ${(p) => p.theme.color.n50};
+        --header-color: ${(p) => p.theme.color.n900};
+        --button-hover-color: ${(p) => p.theme.color.b100};
+        --button-active-color: ${(p) => p.theme.color.b150};
+    `,
+};
 
 const Logo = styled.div`
     display: flex;
     font-family: ${(p) => p.theme.font.family.title};
     font-weight: ${(p) => p.theme.font.weight.bold};
     font-size: clamp(2rem, 2.2vw, 2.4rem);
+    color: var(--header-color);
 
     img {
         height: clamp(2rem, 2.2vw, 2.4rem);
@@ -23,16 +50,38 @@ const Logo = styled.div`
     }
 `;
 
+const NavLink = styled(Link)`
+    cursor: pointer;
+    font-family: ${(p) => p.theme.font.family.body};
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--header-color);
+    padding: 1.6rem 2.4rem;
+    border-radius: 1.6rem;
+    background: var(--header-bg-color);
+
+    &:hover {
+        background: var(--button-hover-color);
+    }
+
+    &.active {
+        background: var(--button-active-color);
+    }
+`;
+
 const StyledHeader = styled.header`
+    ${(p) => p.variantStyle}
+
     position: fixed;
     width: 100vw;
     top: 0;
     z-index: 10;
-    background-color: ${(p) => p.theme.color.b50};
+    background-color: var(--header-bg-color, ${(p) => p.theme.color.b50});
 
     a {
         text-decoration: none;
-        color: ${(p) => p.theme.color.n900};
     }
 
     nav {
@@ -82,17 +131,19 @@ const StyledHeader = styled.header`
             }
 
             li {
-                margin: 0 auto;
+                margin: 2rem auto;
+                text-align: start;
             }
         }
     }
 `;
 
-function Header() {
+function Header({ variant }) {
+    const variantStyle = VARIANTS[variant];
     const [isToggled, setIsToggled] = useState(false);
 
     return (
-        <StyledHeader isToggled={isToggled}>
+        <StyledHeader variantStyle={variantStyle} isToggled={isToggled} >
             <nav>
                 <div className='menu-tab'>
                     <Link to='/'>
@@ -110,9 +161,9 @@ function Header() {
                     />
                 </div>
                 <ul>
-                    <li><Link to='/work'><Button variant='default' size='lg'>WORK</Button></Link></li>
-                    <li><Link to='/blog'><Button variant='default' size='lg'>BLOG</Button></Link></li>
-                    <li><Link to='/about'><Button variant='default' size='lg'>ABOUT</Button></Link></li>
+                    <li><NavLink to='/work' activeStyle>WORK</NavLink></li>
+                    <li><NavLink to='/blog' activeStyle>BLOG</NavLink></li>
+                    <li><NavLink to='/about' activeStyle>ABOUT</NavLink></li>
                 </ul>
             </nav>
         </StyledHeader>
