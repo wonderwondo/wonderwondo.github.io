@@ -58,16 +58,20 @@ const NavLink = styled(Link)`
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: var(--header-color);
-    padding: 1.6rem 2.4rem;
-    border-radius: 1.6rem;
-    background: var(--header-bg-color);
 
     &:hover {
+        transition: background 0.4s ease-in-out;
         background: var(--button-hover-color);
     }
 
-    &.active {
-        background: var(--button-active-color);
+    @media ${(p) => p.theme.device.sm} {
+        padding: 1.6rem 2.4rem;
+        border-radius: 1.6rem;
+        background: var(--header-bg-color);
+
+        &.active {
+            background: var(--button-active-color);
+        }   
     }
 `;
 
@@ -127,12 +131,15 @@ const StyledHeader = styled.header`
             @media ${(p) => p.theme.device.xs} {
                 display: ${(p) => p.isToggled ? 'grid' : 'none'};
                 grid-template-columns: 1fr;
-                margin-bottom: 2em;
+                margin-bottom: 2.4em;
             }
 
             li {
-                margin: 2rem auto;
-                text-align: start;
+                @media ${(p) => p.theme.device.xs} {
+                    display: flex;
+                    align-items: flex-start;
+                    margin: 1.6rem 0;
+                }
             }
         }
     }
@@ -154,16 +161,16 @@ function Header({ variant }) {
                     </Link>
                     <MenuRounded 
                         className='menu-icon'
+                        style={{ color: "var(--header-color)" }}
                         onClick={() => {
                             setIsToggled(!isToggled);
-                            console.log("haha");
-                        }} 
+                        }}
                     />
                 </div>
                 <ul>
-                    <li><NavLink to='/work' activeStyle>WORK</NavLink></li>
-                    <li><NavLink to='/blog' activeStyle>BLOG</NavLink></li>
-                    <li><NavLink to='/about' activeStyle>ABOUT</NavLink></li>
+                    <li><NavLink to='/work' activeStyle>Work</NavLink></li>
+                    <li><NavLink to='/blog' activeStyle>Blog</NavLink></li>
+                    <li><NavLink to='/about' activeStyle>About</NavLink></li>
                 </ul>
             </nav>
         </StyledHeader>
