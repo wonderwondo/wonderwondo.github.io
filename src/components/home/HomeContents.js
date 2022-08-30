@@ -30,7 +30,7 @@ function HomeContents() {
                         </OverlayCardTitle>
                     </OverlayCardContainer>
                     <OverlayCardContainer>
-                        <OverlayCardBg background={`https://images.unsplash.com/photo-1659768537144-15b6ef157439?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80`}/>
+                        <OverlayCardBg background={`https://images.unsplash.com/photo-1658784566751-95382f065d71?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80`}/>
                         <OverlayCardTitle>
                             <h4>Motivational Finance Tracking for<br />University Students with Less Stress</h4>
                             <h4>2020</h4>
