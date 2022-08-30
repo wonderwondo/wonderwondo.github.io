@@ -92,7 +92,7 @@ const StyledHeader = styled.header`
         display: flex;
         align-items: center;
         justify-content: space-between;
-        height: 11.2rem;
+        height: ${(p) => p.theme.size.headerHeight};
         max-width: 144rem;
         margin: 0 auto;
         padding: 0 clamp(4rem, 10.3vw, 14.8rem);

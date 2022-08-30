@@ -44,10 +44,12 @@ const device = {
     lg: `only screen and (min-width: ${breakpoint.lg})`
 }
 
-// console.log(`${breakpoint.sm}`);
+const size = {
+    headerHeight: `11.2rem`,
+} 
 
 const theme = {
-    color, font, device
+    color, font, device, size
 };
 
 export default theme;

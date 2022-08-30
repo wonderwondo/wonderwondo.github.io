@@ -42,7 +42,7 @@ const StyledSplash = styled.section`
 
             @media ${(p) => p.theme.device.xs} {
                 width: 100%;
-                margin-bottom: 4rem;
+                margin-bottom: 3rem;
             }
         }
 
@@ -78,7 +78,7 @@ const StyledSplash = styled.section`
     @keyframes hide {
         0% {
             transform: translateY(0);
-        } 
+        }
         100% {
             transform: translateY(-100vh);
         }
