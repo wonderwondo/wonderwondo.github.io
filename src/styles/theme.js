@@ -45,7 +45,8 @@ const device = {
 }
 
 const size = {
-    headerHeight: `11.2rem`,
+    innerPadding: `11.2rem`,
+    borderRadius: `6.4rem`
 } 
 
 const theme = {

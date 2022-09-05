@@ -5,7 +5,7 @@ const StyledSplash = styled.section`
     height: 100vh;
     position: fixed;
     top: 0;
-    z-index: 20;
+    z-index: 999;
     display: flex;
     align-items: center;
     background: ${(p) => p.theme.color.n900};

@@ -77,11 +77,10 @@ const NavLink = styled(Link)`
 
 const StyledHeader = styled.header`
     ${(p) => p.variantStyle}
-
-    position: fixed;
     width: 100vw;
+    position: fixed;
     top: 0;
-    z-index: 10;
+    z-index: 1;
     background-color: var(--header-bg-color, ${(p) => p.theme.color.b50});
 
     a {
@@ -92,10 +91,10 @@ const StyledHeader = styled.header`
         display: flex;
         align-items: center;
         justify-content: space-between;
-        height: ${(p) => p.theme.size.headerHeight};
+        height: ${(p) => p.theme.size.innerPadding};
         max-width: 144rem;
         margin: 0 auto;
-        padding: 0 clamp(4rem, 10.3vw, 14.8rem);
+        padding: 0 ${(p) => p.theme.size.innerPadding};     // clamp(4rem, 10.3vw, 14.8rem)
 
         @media ${(p) => p.theme.device.xs} {
             flex-direction: column;

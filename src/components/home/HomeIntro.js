@@ -6,20 +6,18 @@ const StyledHomeIntro = styled.div`
     height: 80vh;
     position: 0;
 
-    .h2-light {
+    h2:nth-child(1) {
         font-weight: 600;
-    }
-
-    .h2-light:nth-child(1) {
-        margin-top: 12rem;
+        margin-top: 20rem;
         margin-bottom: 3.2rem;
     }
 
-    .h2-light:nth-child(2) {
+    h2:nth-child(2) {
+        font-weight: 600;
         margin-bottom: 1.6rem;
     }
 
-    .h4-light {
+    h4 {
         max-width: 53rem;
         margin-top: 10rem;
         line-height: 2.8rem;
@@ -35,10 +33,10 @@ function HomeIntro() {
         <StyledHomeIntro>
             <GlobalOuter>
                 <GlobalInner>
-                    <h2 className='h2-light'>Hello,</h2>
-                    <h2 className='h2-light'>I’m an interaction designer</h2>
+                    <h2>Hello,</h2>
+                    <h2>I’m an interaction designer</h2>
                     <h2>Wondo Jeong</h2>
-                    <h4 className='h4-light'>Here are some projects that I am most proud of 
+                    <h4>Here are some projects that I am most proud of 
                         and give you a hint of my design approach.</h4>
                 </GlobalInner>
             </GlobalOuter>

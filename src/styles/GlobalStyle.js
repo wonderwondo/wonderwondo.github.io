@@ -15,6 +15,16 @@ const GlobalStyle = createGlobalStyle`
 
     body {
         margin: 0;
+        overflow: overlay;
+        
+        ::-webkit-scrollbar {
+            width: 1rem;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            border-radius: 0.5rem;
+            background-color: rgba(117, 117, 117, 0.5);
+        }
     }
 
     .h0 {
