@@ -17,13 +17,13 @@ const GlobalStyle = createGlobalStyle`
         margin: 0;
         overflow: overlay;
         
-        ::-webkit-scrollbar {
+        ::-webkit-scrollbar { 
             width: 1rem;
         }
 
         ::-webkit-scrollbar-thumb {
             border-radius: 0.5rem;
-            background-color: rgba(117, 117, 117, 0.5);
+            background-color: rgba(38, 38, 38, 0.5);
         }
     }
 

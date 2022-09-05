@@ -14,7 +14,7 @@ function Home() {
       		<Header variant='home' />
 			<HomeIntro />
 			<HomeContent />
-      		{/* <Splash /> */}
+      		<Splash />
     	</StyledHome>
   	);
 }
