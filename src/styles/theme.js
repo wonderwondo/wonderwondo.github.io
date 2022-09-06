@@ -46,6 +46,7 @@ const device = {
 
 const size = {
     innerPadding: `11.2rem`,
+    footerInnerPadding: `3.2rem`,
     borderRadius: `6.4rem`
 } 
 

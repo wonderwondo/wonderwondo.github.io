@@ -1,45 +1,53 @@
+import { useRef, useState, useEffect } from "react";
+import useScroll from '../../hooks/useScroll'
 import styled from "styled-components";
 import { GlobalOuter, GlobalInner } from "../GlobalLayout";
 import { OCardContainer, OCardImageWrapper, OCardContent, OCardImage, OCardTitle, OCardDesc } from "../OverlayCard";
-import { useRef, useState, useEffect } from "react";
-import useScroll from '../../hooks/useScroll'
 
 const StyledHomeContent = styled.div`
     width: 100%;
 `;
 
 function HomeContent() {
-    const ref1 = useRef();
-    const ref2 = useRef();
-    const ref3 = useRef();
+    let divRef = useRef([]);
     const [divY1, setDivY1] = useState();
     const [divY2, setDivY2] = useState();
     const [divY3, setDivY3] = useState();
-    const getPosition = () => {    
-        const divY1 = ref1.current.offsetTop;
-        const divY2 = ref2.current.offsetTop;
-        const divY3 = ref3.current.offsetTop;
-        setDivY1(divY1);
-        setDivY2(divY2);
-        setDivY3(divY3);
+
+    const getPosition = () => {
+        if(divRef.current[0]) {
+            const divY1 = divRef.current[0].offsetTop;
+            setDivY1(divY1);
+        }
+        if(divRef.current[1]) {
+            const divY2 = divRef.current[1].offsetTop;
+            setDivY2(divY2);
+        }
+        if(divRef.current[2]) {
+            const divY3 = divRef.current[2].offsetTop;
+            setDivY3(divY3);
+        }
     };
+
     useEffect(() => {
         getPosition();
     }, []);
+
     useEffect(() => {
         window.addEventListener("resize", getPosition);
     }, []);
+
     const scrollY = useScroll();
+    
     const inView1 = (scrollY > divY1 - 100) ? true : false;
     const inView2 = (scrollY > divY2 - 100) ? true : false;
     const inView3 = (scrollY > divY3 - 100) ? true : false;
-    console.log(scrollY);
 
     return(
         <StyledHomeContent>
             <GlobalOuter>
                 <GlobalInner>
-                    <OCardContainer ref={ref1}>
+                    <OCardContainer ref={el => (divRef.current[0] = el)}>
                         <OCardImageWrapper inView={inView1}>
                             <OCardImage inView={inView1} src={`https://images.unsplash.com/photo-1661838458816-055a3db1db89?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80`} />
                         </OCardImageWrapper>
@@ -56,7 +64,7 @@ function HomeContent() {
                             </OCardDesc>
                         </OCardContent>
                     </OCardContainer>
-                    <OCardContainer ref={ref2}>
+                    <OCardContainer ref={el => (divRef.current[1] = el)}>
                         <OCardImageWrapper inView={inView2}>
                             <OCardImage inView={inView2} src={`https://images.unsplash.com/photo-1661103517104-9d118ccad126?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80`} />
                         </OCardImageWrapper>
@@ -73,7 +81,7 @@ function HomeContent() {
                             </OCardDesc>
                         </OCardContent>
                     </OCardContainer>
-                    <OCardContainer ref={ref3}>
+                    <OCardContainer ref={el => (divRef.current[2] = el)}>
                         <OCardImageWrapper inView={inView3}>
                             <OCardImage inView={inView3} src={`https://images.unsplash.com/photo-1658784566751-95382f065d71?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80`} />
                         </OCardImageWrapper>

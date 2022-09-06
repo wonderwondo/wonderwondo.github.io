@@ -167,9 +167,9 @@ function Header({ variant }) {
                     />
                 </div>
                 <ul>
-                    <li><NavLink to='/work' activeStyle>Work</NavLink></li>
-                    <li><NavLink to='/blog' activeStyle>Blog</NavLink></li>
-                    <li><NavLink to='/about' activeStyle>About</NavLink></li>
+                    <li><NavLink to='/work' >Work</NavLink></li>
+                    <li><NavLink to='/blog' >Blog</NavLink></li>
+                    <li><NavLink to='/about' >About</NavLink></li>
                 </ul>
             </nav>
         </StyledHeader>

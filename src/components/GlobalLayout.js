@@ -13,8 +13,13 @@ const GlobalOuter = styled.div`
 const GlobalInner = styled.div`
     display: flex;
     width: 100%;
+    height: 100%;
     flex-direction: column;
     padding: 0 ${(p) => p.theme.size.innerPadding};     // clamp(4rem, 10.3vw, 14.8rem)
 `;
 
-export {GlobalOuter, GlobalInner};
+const FooterInner = styled(GlobalInner)`
+    padding: 0 ${(p) => p.theme.size.footerInnerPadding};     // clamp(4rem, 10.3vw, 14.8rem)
+`;
+
+export {GlobalOuter, GlobalInner, FooterInner};
