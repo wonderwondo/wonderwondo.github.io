@@ -55,7 +55,7 @@ function HomeContent() {
                     <OCardContainer ref={el => (divRef.current[0] = el)}>
                         <OCardImageWrapper inView={inView1}>
                             <NavLink to='/work'>
-                                <OCardImage inView={inView1} src="image/thumbnail_telco.png" />
+                                <OCardImage inView={inView1} src="image/home/thumbnail_telco.png" />
                             </NavLink>
                         </OCardImageWrapper>
                         <NavLink to='/work'>
@@ -76,7 +76,7 @@ function HomeContent() {
                     <OCardContainer ref={el => (divRef.current[1] = el)}>
                         <OCardImageWrapper inView={inView2}>
                             <NavLink to='/blog'>
-                                <OCardImage inView={inView2} src="image/thumbnail_flipme.jpg" />
+                                <OCardImage inView={inView2} src="image/home/thumbnail_flipme.jpg" />
                             </NavLink>
                         </OCardImageWrapper>
                         <NavLink to='/blog'>
@@ -97,7 +97,7 @@ function HomeContent() {
                     <OCardContainer ref={el => (divRef.current[2] = el)}>
                         <OCardImageWrapper inView={inView3}>
                             <NavLink to='/about'>
-                                <OCardImage inView={inView3} src="image/thumbnail_moneyplanet.png" />
+                                <OCardImage inView={inView3} src="image/home/thumbnail_moneyplanet.png" />
                             </NavLink>
                         </OCardImageWrapper>
                         <NavLink to='/about'>

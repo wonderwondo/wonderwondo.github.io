@@ -15,11 +15,17 @@ const GlobalInner = styled.div`
     width: 100%;
     height: 100%;
     flex-direction: column;
+    justify-content: center;
     padding: 0 ${(p) => p.theme.size.innerPadding};     // clamp(4rem, 10.3vw, 14.8rem)
+`;
+
+const CenteredInner = styled(GlobalInner)`
+    justify-content: center;
+    align-items: center;
 `;
 
 const FooterInner = styled(GlobalInner)`
     padding: 0 ${(p) => p.theme.size.footerInnerPadding};     // clamp(4rem, 10.3vw, 14.8rem)
 `;
 
-export {GlobalOuter, GlobalInner, FooterInner};
+export {GlobalOuter, GlobalInner, CenteredInner, FooterInner};

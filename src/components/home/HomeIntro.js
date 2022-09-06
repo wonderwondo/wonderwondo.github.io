@@ -4,16 +4,17 @@ import { GlobalOuter, GlobalInner } from "../GlobalLayout";
 const StyledHomeIntro = styled.div`
     width: 100%;
     height: 80vh;
-    position: 0;
 
     h2:nth-child(1) {
-        font-weight: 600;
+        color: ${(p) => p.theme.color.n900};
+        font-weight: ${(p) => p.theme.font.weight.semibold};
         margin-top: 20rem;
         margin-bottom: 3.2rem;
     }
 
     h2:nth-child(2) {
-        font-weight: 600;
+        color: ${(p) => p.theme.color.n900};
+        font-weight: ${(p) => p.theme.font.weight.semibold};
         margin-bottom: 1.6rem;
     }
 

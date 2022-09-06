@@ -4,9 +4,10 @@ import { GlobalOuter, FooterInner } from "./GlobalLayout";
 const StyledBackToTop = styled.div`
     width: 100%;
     height: 5.6rem;
+    margin-top: -5.6rem;
     position: sticky;
     bottom: 0;
-    z-index: 1;
+    z-index: 10;
 `;
 
 const BackToTopBtnWrapper = styled.div`

@@ -20,7 +20,7 @@ function Home() {
 			<HomeOutro />
 			<BackToTop />
 			<Footer />
-      		{/* <Splash /> */}
+      		<Splash />
     	</StyledHome>
   	);
 }
