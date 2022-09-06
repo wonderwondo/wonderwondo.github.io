@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import Header from '../components/Header';
 import AboutIntro from '../components/about/AboutIntro';
+import AboutContent from '../components/about/AboutContent';
 import BackToTop from '../components/BackToTop';
 import Footer from '../components/Footer';
 
@@ -13,6 +14,7 @@ const About = () => {
         <StyledAbout>
           <Header variant='about' />
 		  <AboutIntro />
+		  <AboutContent />
 		  <BackToTop />
 		  <Footer />
         </StyledAbout>

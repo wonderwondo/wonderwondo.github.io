@@ -10,7 +10,7 @@ const ButtonContainer = styled.div`
 
 const Button = styled.button`
     min-width: 18rem;
-    padding: 1.6rem 2.4rem;
+    padding: 1.2rem 2.4rem;
     color: ${(p) => p.theme.color.white};
     background-color: ${(p) => p.theme.color.n900};
     border-style: solid;

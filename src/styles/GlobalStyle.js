@@ -65,6 +65,7 @@ const GlobalStyle = createGlobalStyle`
         font-family: ${(p) => p.theme.font.family.body};
         font-weight: 400;
         font-size: 2.0rem;
+        line-height: 130%;
     }
 
     p {

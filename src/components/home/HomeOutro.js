@@ -4,7 +4,6 @@ import { ButtonContainer, Button } from "../Button";
 
 const StyledHomeOutro = styled.div`
     width: 100%;
-    height: 30rem;
 `;
 
 function HomeOutro() {
@@ -13,7 +12,7 @@ function HomeOutro() {
             <GlobalOuter>
                 <GlobalInner>
                     <ButtonContainer>
-                        <Button type='button' onClick="location.href='#'">See More Case Studies</Button>
+                        <Button type='button'>See More Case Studies</Button>
                     </ButtonContainer>
                 </GlobalInner>
             </GlobalOuter>
