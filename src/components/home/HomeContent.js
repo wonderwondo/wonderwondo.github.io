@@ -1,4 +1,5 @@
 import { useRef, useState, useEffect } from "react";
+import { NavLink as Link } from "react-router-dom";
 import useScroll from '../../hooks/useScroll'
 import styled from "styled-components";
 import { GlobalOuter, GlobalInner } from "../GlobalLayout";
@@ -6,6 +7,10 @@ import { OCardContainer, OCardImageWrapper, OCardContent, OCardImage, OCardTitle
 
 const StyledHomeContent = styled.div`
     width: 100%;
+`;
+
+const NavLink = styled(Link)`
+    text-decoration: none;
 `;
 
 function HomeContent() {
@@ -49,54 +54,66 @@ function HomeContent() {
                 <GlobalInner>
                     <OCardContainer ref={el => (divRef.current[0] = el)}>
                         <OCardImageWrapper inView={inView1}>
-                            <OCardImage inView={inView1} src={`https://images.unsplash.com/photo-1661838458816-055a3db1db89?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80`} />
+                            <NavLink to='/work'>
+                                <OCardImage inView={inView1} src="image/thumbnail_telco.png" />
+                            </NavLink>
                         </OCardImageWrapper>
-                        <OCardContent inView={inView1}>
-                            <OCardTitle>
-                                <h4>Telco Rejuvenation</h4>
-                                <h4>2021</h4>
-                                <h4>Interaction Design</h4>
-                                <p>Interaction Model · Upsell/Cross-Sell</p>
-                            </OCardTitle>
-                            <OCardDesc>
-                                <h4>Challenge</h4>
-                                <span>How might we rejuvenate Indonesia’s biggest telco that invites customers to consistent and delightful experiences at scale.</span>
-                            </OCardDesc>
-                        </OCardContent>
+                        <NavLink to='/work'>
+                            <OCardContent inView={inView1}>
+                                <OCardTitle>
+                                    <h4>Telco Rejuvenation</h4>
+                                    <h4>2021</h4>
+                                    <h4>Interaction Design</h4>
+                                    <p>Interaction Model · Upsell/Cross-Sell</p>
+                                </OCardTitle>
+                                <OCardDesc>
+                                    <h4>Challenge</h4>
+                                    <span>How might we rejuvenate Indonesia’s biggest telco that invites customers to consistent and delightful experiences at scale.</span>
+                                </OCardDesc>
+                            </OCardContent>
+                        </NavLink>
                     </OCardContainer>
                     <OCardContainer ref={el => (divRef.current[1] = el)}>
                         <OCardImageWrapper inView={inView2}>
-                            <OCardImage inView={inView2} src={`https://images.unsplash.com/photo-1661103517104-9d118ccad126?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80`} />
+                            <NavLink to='/blog'>
+                                <OCardImage inView={inView2} src="image/thumbnail_flipme.jpg" />
+                            </NavLink>
                         </OCardImageWrapper>
-                        <OCardContent inView={inView2}>
-                            <OCardTitle>
-                                <h4>Augmenting Peer-to-Peer<br />Interaction in Online Learning</h4>
-                                <h4>2020</h4>
-                                <h4>Interaction Design</h4>
-                                <p>Tangible Interaction · Post-COVID Education</p>
-                            </OCardTitle>
-                            <OCardDesc>
-                                <h4>Challenge</h4>
-                                <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pulvinar purus et nisi dictum, ac suscipit neque porttitor.</span>
-                            </OCardDesc>
-                        </OCardContent>
+                        <NavLink to='/blog'>
+                            <OCardContent inView={inView2}>
+                                <OCardTitle>
+                                    <h4>Augmenting Peer-to-Peer<br />Interaction in Online Learning</h4>
+                                    <h4>2020</h4>
+                                    <h4>Interaction Design</h4>
+                                    <p>Tangible Interaction · Post-COVID Education</p>
+                                </OCardTitle>
+                                <OCardDesc>
+                                    <h4>Challenge</h4>
+                                    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pulvinar purus et nisi dictum, ac suscipit neque porttitor.</span>
+                                </OCardDesc>
+                            </OCardContent>
+                        </NavLink>
                     </OCardContainer>
                     <OCardContainer ref={el => (divRef.current[2] = el)}>
                         <OCardImageWrapper inView={inView3}>
-                            <OCardImage inView={inView3} src={`https://images.unsplash.com/photo-1658784566751-95382f065d71?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80`} />
+                            <NavLink to='/about'>
+                                <OCardImage inView={inView3} src="image/thumbnail_moneyplanet.png" />
+                            </NavLink>
                         </OCardImageWrapper>
-                        <OCardContent inView={inView3}>
-                            <OCardTitle>
-                                <h4>Motivational Finance Tracking for<br />University Students with Less Stress</h4>
-                                <h4>2020</h4>
-                                <h4>Service & Interaction Design</h4>
-                                <p>New Research Method · Finance</p>
-                            </OCardTitle>
-                            <OCardDesc>
-                                <h4>Challenge</h4>
-                                <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pulvinar purus et nisi dictum, ac suscipit neque porttitor.</span>
-                            </OCardDesc>
-                        </OCardContent>
+                        <NavLink to='/about'>
+                            <OCardContent inView={inView3}>
+                                <OCardTitle>
+                                    <h4>Motivational Finance Tracking for<br />University Students with Less Stress</h4>
+                                    <h4>2020</h4>
+                                    <h4>Service & Interaction Design</h4>
+                                    <p>New Research Method · Finance</p>
+                                </OCardTitle>
+                                <OCardDesc>
+                                    <h4>Challenge</h4>
+                                    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pulvinar purus et nisi dictum, ac suscipit neque porttitor.</span>
+                                </OCardDesc>
+                            </OCardContent>
+                        </NavLink>
                     </OCardContainer>
                 </GlobalInner>
             </GlobalOuter>

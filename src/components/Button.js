@@ -1,56 +1,48 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
-const SIZES = {
-    lg: css`
-      --button-font-size: 1.6rem;
-      --button-font-weight: 600;
-      --button-letter-spacing: 1.28px;
-      --button-padding: 16px 24px;
-      --button-radius: 16px;
-    `
-};
+const ButtonContainer = styled.div`
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`;
 
-const VARIANTS = {
-  default: css`
-      --button-color: ${(p) => p.theme.color.n900};
-      --button-bg-color: ${(p) => p.theme.color.b50};
-      --button-hover-bg-color: ${(p) => p.theme.color.b100};
-    `,
-};
-
-const StyledButton = styled.button`
-    ${(p) => p.sizeStyle}
-    ${(p) => p.variantStyle}
-
-    margin: 0;
-    border: none;
-    cursor: pointer;
+const Button = styled.button`
+    min-width: 18rem;
+    padding: 1.6rem 2.4rem;
+    color: ${(p) => p.theme.color.white};
+    background-color: ${(p) => p.theme.color.n900};
+    border-style: solid;
+    border-width: 0.1rem;
+    border-color: ${(p) => p.theme.color.black};
+    border-radius: 1.6rem;
     font-family: ${(p) => p.theme.font.family.body};
-    font-size: var(--button-font-size, 1rem);
-    font-weight: var(--button-font-weight, 600);
-    letter-spacing: var(--button-letter-spacing, 1px);
-    padding: var(--button-padding, 12px 16px);
-    border-radius: var(--button-radius, 8px);
-    color: var(--button-color, #262626);
-    background: var(--button-bg-color, #FAF7F2);
+    font-weight: ${(p) => p.theme.font.weight.semibold};
+    font-size: 1.6rem;
+    letter-spacing: 1.25px;
+    text-transform: uppercase;
+    cursor: pointer;
 
-    &:hover {
-        background: var(--button-hover-bg-color, #F8F2EE);
+    :hover {
+        background-color: ${(p) => p.theme.color.n700};
+        border-color: ${(p) => p.theme.color.n700};
+    }
+    -webkit-transition: background-color 0.2s ease-in-out;
+            transition: background-color 0.2s ease-in-out;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+`;
+
+const OutlinedButton = styled(Button)`
+    color: ${(p) => p.theme.color.black};
+    background-color: ${(p) => p.theme.color.white};
+
+    :hover {
+        background-color: ${(p) => p.theme.color.b50};
     }
 `;
 
-function Button({ size, variant, children }) {
-    const sizeStyle = SIZES[size];
-    const variantStyle = VARIANTS[variant];
-
-    return (
-        <StyledButton
-            sizeStyle={sizeStyle}
-            variantStyle={variantStyle}
-        >
-            {children}
-        </StyledButton>
-    );
-}
-
-export default Button;
+export { ButtonContainer, Button, OutlinedButton };

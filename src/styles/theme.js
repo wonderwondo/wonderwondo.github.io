@@ -7,6 +7,7 @@ const color = {
     n100:  '#E9E9E9',
     n50:   '#F7F7F7',
     white: '#FFFFFF',
+    black: '#000000',
 
     b200:  '#DDD7CB',
     b150:  '#EDE8DF',
