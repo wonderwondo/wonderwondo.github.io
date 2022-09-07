@@ -1,4 +1,4 @@
-import { NavLink as Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { GlobalOuter, FooterInner } from "./GlobalLayout";
 
@@ -40,22 +40,28 @@ const FooterItemWrapper = styled.div`
     }
 
     span {
-        color: ${(p) => p.theme.color.white};
-        margin: 0 1rem;
+        
     }
     
     .sns  {
         width: 4rem;
         height: 4rem;
     }
-`;
 
-const NavLink = styled(Link)`
-    color: ${(p) => p.theme.color.white};
-    font-weight: ${(p) => p.theme.font.weight.semibold};
-    text-transform: uppercase;
-    letter-spacing: 1.25px;
-    text-decoration: none;
+    span {
+        color: ${(p) => p.theme.color.white};
+    }
+
+    .footerNav {
+        font-weight: ${(p) => p.theme.font.weight.semibold};
+        text-transform: uppercase;
+        letter-spacing: 1.25px;
+        text-decoration: none;
+    }
+
+    .footerNavDelim {
+        margin: 0 1rem;
+    }
 `;
 
 function Footer() {
@@ -77,13 +83,21 @@ function Footer() {
                         </FooterContent>
                         <FooterContentCenter>
                             <FooterItemWrapper>
-                                <NavLink to='/' className='ps'>Home</NavLink>
-                                <span className='ps'>/</span>
-                                <NavLink to='/work' className='ps'>Work</NavLink>
-                                <span className='ps'>/</span>
-                                <NavLink to='/blog' className='ps'>Blog</NavLink>
-                                <span className='ps'>/</span>
-                                <NavLink to='/about' className='ps'>About</NavLink>
+                                <Link to='/'>
+                                    <span className='ps footerNav'>Home</span>
+                                </Link>
+                                <span className='ps footerNavDelim'>/</span>
+                                <Link to='/work'>
+                                    <span className='ps footerNav'>Work</span>
+                                </Link>
+                                <span className='ps footerNavDelim'>/</span>
+                                <Link to='/blog'>
+                                    <span className='ps footerNav'>Blog</span>
+                                </Link>
+                                <span className='ps footerNavDelim'>/</span>
+                                <Link to='/about'>
+                                    <span className='ps footerNav'>About</span>
+                                </Link>
                             </FooterItemWrapper>
                         </FooterContentCenter>
                     </FooterContainer>

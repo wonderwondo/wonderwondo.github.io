@@ -13,10 +13,10 @@ const About = () => {
     return (
         <StyledAbout>
           <Header variant='about' />
-		  <AboutIntro />
-		  <AboutContent />
-		  <BackToTop />
-		  <Footer />
+          <AboutIntro />
+          <AboutContent />
+          <BackToTop />
+          <Footer />
         </StyledAbout>
       );
 }

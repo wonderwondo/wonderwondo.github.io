@@ -1,16 +1,12 @@
 import { useRef, useState, useEffect } from "react";
-import { NavLink as Link } from "react-router-dom";
 import useScroll from '../../hooks/useScroll'
 import styled from "styled-components";
 import { GlobalOuter, GlobalInner } from "../GlobalLayout";
 import { OCardContainer, OCardImageWrapper, OCardContent, OCardImage, OCardTitle, OCardDesc } from "../OverlayCard";
+import { CleanLink } from "../CustomLink";
 
 const StyledHomeContent = styled.div`
     width: 100%;
-`;
-
-const NavLink = styled(Link)`
-    text-decoration: none;
 `;
 
 function HomeContent() {
@@ -54,11 +50,11 @@ function HomeContent() {
                 <GlobalInner>
                     <OCardContainer ref={el => (divRef.current[0] = el)}>
                         <OCardImageWrapper inView={inView1}>
-                            <NavLink to='/work'>
+                            <CleanLink to='/work'>
                                 <OCardImage inView={inView1} src="image/home/thumbnail_telco.png" />
-                            </NavLink>
+                            </CleanLink>
                         </OCardImageWrapper>
-                        <NavLink to='/work'>
+                        <CleanLink to='/work'>
                             <OCardContent inView={inView1}>
                                 <OCardTitle>
                                     <h4>Telco Rejuvenation</h4>
@@ -71,15 +67,15 @@ function HomeContent() {
                                     <span>How might we rejuvenate Indonesia’s biggest telco that invites customers to consistent and delightful experiences at scale.</span>
                                 </OCardDesc>
                             </OCardContent>
-                        </NavLink>
+                        </CleanLink>
                     </OCardContainer>
                     <OCardContainer ref={el => (divRef.current[1] = el)}>
                         <OCardImageWrapper inView={inView2}>
-                            <NavLink to='/blog'>
+                            <CleanLink to='/blog'>
                                 <OCardImage inView={inView2} src="image/home/thumbnail_flipme.jpg" />
-                            </NavLink>
+                            </CleanLink>
                         </OCardImageWrapper>
-                        <NavLink to='/blog'>
+                        <CleanLink to='/blog'>
                             <OCardContent inView={inView2}>
                                 <OCardTitle>
                                     <h4>Augmenting Peer-to-Peer<br />Interaction in Online Learning</h4>
@@ -92,15 +88,15 @@ function HomeContent() {
                                     <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pulvinar purus et nisi dictum, ac suscipit neque porttitor.</span>
                                 </OCardDesc>
                             </OCardContent>
-                        </NavLink>
+                        </CleanLink>
                     </OCardContainer>
                     <OCardContainer ref={el => (divRef.current[2] = el)}>
                         <OCardImageWrapper inView={inView3}>
-                            <NavLink to='/about'>
+                            <CleanLink to='/about'>
                                 <OCardImage inView={inView3} src="image/home/thumbnail_moneyplanet.png" />
-                            </NavLink>
+                            </CleanLink>
                         </OCardImageWrapper>
-                        <NavLink to='/about'>
+                        <CleanLink to='/about'>
                             <OCardContent inView={inView3}>
                                 <OCardTitle>
                                     <h4>Motivational Finance Tracking for<br />University Students with Less Stress</h4>
@@ -113,7 +109,7 @@ function HomeContent() {
                                     <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pulvinar purus et nisi dictum, ac suscipit neque porttitor.</span>
                                 </OCardDesc>
                             </OCardContent>
-                        </NavLink>
+                        </CleanLink>
                     </OCardContainer>
                 </GlobalInner>
             </GlobalOuter>

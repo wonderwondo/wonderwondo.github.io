@@ -99,7 +99,9 @@ function AboutContent() {
                             <span className='ps'>Jinhee&Jiwoo in Montreal,<br />Leica M5 (roll: Kodak ColourPlus)</span>
                         </CardImageWrapper>
                         <ButtonContainer style={{marginTop: '5rem'}}>
-                            <OutlinedButton style={{width: '21rem'}}>See Photos</OutlinedButton>
+                            <a href="https://www.instagram.com/">
+                                <OutlinedButton style={{width: '21rem'}}>See Photos</OutlinedButton>
+                            </a>
                         </ButtonContainer>
                     </Card>
                     <Card style={{borderRadius: '4.6rem 4.6rem 0 0'}}>
@@ -113,7 +115,9 @@ function AboutContent() {
                             <p style={{marginLeft: '2.4rem'}}>Wondo Jeong<br />Interaction Designer<br />wondopamine@gmail.com<br />Singapore(current)<br />(+65) 8894 6838</p>
                         </div>
                     <ButtonContainer style={{marginTop: '5rem'}}>
-                        <Button style={{width: '21rem'}}>See My Resume</Button>
+                        <a href="https://www.linkedin.com/">
+                            <Button style={{width: '21rem'}}>See My Resume</Button>
+                        </a>
                     </ButtonContainer>
                     </Card>
                 </CenteredInner>

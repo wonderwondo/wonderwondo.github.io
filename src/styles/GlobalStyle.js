@@ -36,6 +36,7 @@ const GlobalStyle = createGlobalStyle`
 
     h1 {
         font-family: ${(p) => p.theme.font.family.title};
+        color: ${(p) => p.theme.color.n900};
         font-weight: 700;
         font-size: 6.4rem;
         letter-spacing: -0.15rem;;
@@ -43,6 +44,7 @@ const GlobalStyle = createGlobalStyle`
 
     h2 {
         font-family: ${(p) => p.theme.font.family.title};
+        color: ${(p) => p.theme.color.n900};
         font-weight: 700;
         font-size: clamp(3.6rem, 9.6vw, 5.6rem);
         letter-spacing: -0.15rem;;
@@ -50,6 +52,7 @@ const GlobalStyle = createGlobalStyle`
 
     h3 {
         font-family: ${(p) => p.theme.font.family.title};
+        color: ${(p) => p.theme.color.n900};
         font-weight: 600;
         font-size: 4.2rem;
         letter-spacing: -0.15rem;;
@@ -57,12 +60,14 @@ const GlobalStyle = createGlobalStyle`
 
     h4 {
         font-family: ${(p) => p.theme.font.family.body};
+        color: ${(p) => p.theme.color.n900};
         font-weight: 500;
         font-size: clamp(1.4rem, 3.7vw, 2.4rem);
     }
 
     h5 {
         font-family: ${(p) => p.theme.font.family.body};
+        color: ${(p) => p.theme.color.n900};
         font-weight: 400;
         font-size: 2.0rem;
         line-height: 130%;
@@ -70,6 +75,7 @@ const GlobalStyle = createGlobalStyle`
 
     p {
         font-family: ${(p) => p.theme.font.family.body};
+        color: ${(p) => p.theme.color.n900};
         font-weight: 400;
         font-size: 1.6rem;
         letter-spacing: 0.04rem;
@@ -77,9 +83,14 @@ const GlobalStyle = createGlobalStyle`
 
     .ps {
         font-family: ${(p) => p.theme.font.family.body};
+        color: ${(p) => p.theme.color.n900};
         font-weight: 400;
         font-size: 1.4rem;
         letter-spacing: 0.04rem;
+    }
+
+    span {
+        color: ${(p) => p.theme.color.n900};
     }
 `;
 

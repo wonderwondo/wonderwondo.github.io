@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { GlobalOuter, CenteredInner } from "../GlobalLayout";
+import { ALink } from "../CustomLink";
 
 const StyledAboutIntro = styled.div`
     width: 100%;
@@ -19,10 +19,6 @@ const StyledAboutIntro = styled.div`
         width: 68rem;
         object-fit: cover;
     }
-`;
-
-const ALink = styled(Link)`
-    color: ${(p) => p.theme.color.n900};
 `;
 
 function AboutIntro() {
