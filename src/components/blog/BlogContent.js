@@ -5,7 +5,7 @@ import { PCardContainer, PCardImage, PCardContent, PCardTag } from "../PostCard"
 
 const StyledBlogContent = styled.div`
     width: 100%;
-
+    margin-bottom: 20rem;
     .postTag {
         font-weight: ${(p) => p.theme.font.weight.semibold};
     }

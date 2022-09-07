@@ -40,7 +40,7 @@ const PCardImage = styled.img`
 `;
 
 const PCardContent = styled.div`
-    width: 100%;
+    width: calc(100% - 2*${(p) => p.theme.size.innerPadding});
     height: 100%;
     display: flex;
     flex-direction: column;
